@@ -1,0 +1,14 @@
+<button class="btn btn-primary" (click)="textStatus = !textStatus">
+  Display Details
+</button>
+<p *ngIf="textStatus">Here is some sample content for the assignment.</p>
+<hr>
+<button class="btn btn-primary" (click)="addText()">
+  Add Text
+</button>
+<div 
+  *ngFor="let click of clickLogs; let i = index"
+  [ngStyle]="{backgroundColor: i > 4 ? 'blue' : 'transparent'}"
+  [ngClass]="{'white-text': i > 4}">
+  {{ i }}
+</div>
